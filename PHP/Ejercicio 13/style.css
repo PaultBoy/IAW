@@ -1,0 +1,155 @@
+header {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    height: 10vh;
+    border: 1px solid black;
+    background-color: blue;
+}
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 80vh;
+    background-color: darkorange;
+
+}
+
+footer{
+    position: relative;
+    height: 10vh;
+    border: 1px solid black;
+    text-align: center;
+    background-color: blue;
+
+}
+.image20{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 5px;
+    height: 120px;
+    width: 200px;
+    
+}
+.image20 img{
+    height: 120px;
+    width: 200px;
+}
+.image20 img:hover{
+    -webkit-filter: brightness(0%);
+    height: 120px;
+    width: 200px;
+    transition-duration: 0.5s;
+}
+.image20 p{
+    position: absolute;
+    color: white;
+}
+.image39{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 5px;
+    height: 120px;
+    width: 200px;
+    
+}
+.image39 img{
+    height: 120px;
+    width: 200px;
+}
+.image39 img:hover{
+    -webkit-filter: brightness(0) invert(1);
+    height: 120px;
+    width: 200px;
+    transition-duration: 0.5s;
+}
+.image39 p{
+    position: absolute;
+    color: white;
+}
+.image59{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 5px;
+    height: 120px;
+    width: 200px;
+    
+}
+.image59:hover{
+    border:5px solid red;
+}
+.image59 img{
+    height: 120px;
+    width: 200px;
+}
+.image59 img{
+    height: 120px;
+    width: 200px;
+}
+.image59 p{
+    position: absolute;
+    color: white;
+}
+.image79{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 5px;
+    height: 120px;
+    width: 200px;
+    
+}
+.image79:hover{
+    height: 240px;
+    width: 400px;
+}
+.image79 img{
+    height: 120px;
+    width: 200px;
+}
+.image79 img:hover{
+    height: 240px;
+    width: 400px;
+    transition-duration: 0.5s;
+}
+.image79 p{
+    position: absolute;
+    color: white;
+}
+.image100{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 5px;
+    height: 120px;
+    width: 200px;
+    
+}
+.image100 img{
+    opacity: 0.5;
+    height: 120px;
+    width: 200px;
+}
+.image100 img:hover{
+    opacity: 1;
+    height: 120px;
+    width: 200px;
+    transition-duration: 0.5s;
+}
+.image100 p{
+    position: absolute;
+    color: white;
+}
+
+

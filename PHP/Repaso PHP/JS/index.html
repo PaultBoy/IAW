@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="imagen()">Imagen</button>
+    <button onclick="parrafo()">Párrafo</button>
+    <script>
+        function imagen(){
+            var img = document.createElement("img");
+            img.src = "https://i.blogs.es/e1feab/google-fotos/1366_2000.jpg";
+            document.body.appendChild(img);
+        }
+        function parrafo(){
+            var p = document.createElement("p");
+            p.innerHTML = "Lorem Ipsum";
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" id="img">
+    <button onclick="randomNumber()">Pulsar</button>
+    <script>
+        var img1 = {
+            src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+            width: "240", 
+            height: "160"   
+        }
+        var img2 = {
+            
+            src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg", 
+            width: "320", 
+            height: "195"
+
+        }
+        var img3 = {
+            src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+            width: "500", 
+            height: "343"
+        }
+
+        var arrImg = [img1, img2, img3]
+        
+        function randomNumber(){
+            var img = document.querySelector("#img")
+            var imgEscogida = arrImg[Math.floor(Math.random()*arrImg.length)]
+            img.src = imgEscogida.src
+            img.width = imgEscogida.width
+            img.height = imgEscogida.height
+        }
+
+    </script>
+</body>
+</html>
