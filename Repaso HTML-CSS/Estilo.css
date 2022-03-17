@@ -1,0 +1,21 @@
+a {
+    background-color: chocolate;
+}
+table {
+    border: 2px black solid;
+    border-collapse: collapse;
+}
+td {
+    border-style: solid;
+    border: 2px black solid;
+}
+
+.linkClase{
+    background-color: green;
+}
+#linkId{
+    background-color: yellow;
+}
+thead{
+    text-align: center;
+}

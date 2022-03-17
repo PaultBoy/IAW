@@ -1,0 +1,42 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+/* Los porcentajes verticales sólo funcionan para etiquetas dentro de etiquetas, no para atributos raíz del body*/
+.titulo{
+    background-color: chartreuse;
+    text-align: center;
+    height: 10vh;
+    width:100%;
+}
+
+.menu{
+    line-height: 50px;
+    text-align: center;
+    background-color: gold;
+}
+.menu a{
+    background-color: orange;
+    padding: 10px;
+    border: 3px solid purple;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+}
+.menu a:hover{
+    background-color: red;
+}
+
+.main{
+    padding: 20px;
+    background-color: hotpink;
+    color:ghostwhite;
+    font-size: large;
+}
+
+.pie{
+    background-color: lightskyblue;
+}
