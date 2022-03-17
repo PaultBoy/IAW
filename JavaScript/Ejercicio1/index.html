@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="parte1">
+        <script>
+            document.write("<img src=\"_107435681_perro1.jpg\"/>")
+            document.write("<img src=\"-como-son-los-monos-aulladores_-655x368.jpg\"/>")
+        </script>
+    </div>
+    <div class="parte2">
+        <script>
+            nombrePerros = ["_107435681_perro1.jpg","f.elconfidencial.com_original_8ec_08c_85c_8ec08c85c866ccb70c4f1c36492d890f.jpg"]
+            for (let i of nombrePerros){
+                document.write("<img src=\""+i+"\"/>")
+            }
+        </script>
+    </div>
+    <div class="parte3">
+        <script>
+            var perros = {
+                pug: "_107435681_perro1.jpg",
+                golden_retriever: "f.elconfidencial.com_original_8ec_08c_85c_8ec08c85c866ccb70c4f1c36492d890f.jpg"
+            }
+            var gatos = {
+                curl: "f.elconfidencial.com_original_47b_328_963_47b3289639713b8e80c8d682d219fba7.jpg",
+                cascara_tortuga: "Kira,_a_tortoise_shell_cat.jpg"            
+            }
+            var monos = {
+                aullador:"-como-son-los-monos-aulladores_-655x368.jpg",
+                macaco:"dimitry-zub-ky0nvwb5aws-unsplash11-655x368.jpg"
+            }
+            var roedores = {
+                raton:"rodenticidas-ppm_0.jpg",
+                raton_marron:"roedores-mas-extranos-668x400x80xX.jpg"
+            }
+            // Se puede llamar al contenido de un objeto y almacenarlo
+            var animales = {
+                perros:perros,
+                gatos:gatos,
+                monos:monos,
+                roedores:roedores
+            }
+            document.write("<img src=\""+animales.perros.pug+"\"/>")
+            document.write("<img src=\""+gatos.curl+"\"/>")
+        </script>
+    </div>
+    <div class="parte4">
+        <script>
+            for(var x in roedores){
+                document.write("<img src=\""+x+"\"/>")
+            }
+        </script>
+        
+    </div>
+</body>
+</html>

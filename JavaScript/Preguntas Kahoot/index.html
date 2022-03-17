@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Kahoot"</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            box-sizing: border-box;
+            
+        }
+        body{
+            width: 100%;
+        }
+        head{
+            display: none;
+        }
+        script{
+            display: none;
+        }
+        #Pregunta{
+            border: 2px black solid;
+            display:flex;
+            flex-direction: column;
+            padding-top: 3%;
+            width: 100%;
+            height: 50vh;
+            text-align: center;
+        }
+        #Respuestas{
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            
+        }
+        #Respuestas > div{
+            border: 2px black solid;
+            padding-top: 5%;
+            text-align: center;
+            width: 50%;
+            height: 25vh;
+        }
+        #Contador{
+            display: inline;
+            margin-top: 3%;
+            padding: 50px;
+            padding-top: 1%;
+            width: 100%;
+            background-color: yellow;
+        }
+        #Aciertos{
+            position:fixed;
+            left: 3%;
+            color: blue;
+        }
+        #Fallos{
+            position:fixed;
+            right: 3%;
+            padding-right: 3%;
+            color: red;
+        }
+        #Respuesta1{
+            background-color: red;
+        }
+        #Respuesta2{
+            background-color: green;
+        }
+        #Respuesta3{
+            background-color: yellow;
+        }
+        #Respuesta4{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="Pregunta">
+        <h1 id="PreguntaEscrita"></h1>
+        <div id="Contador">
+            <h1 id="Aciertos">Aciertos:</h1>
+            <h1 id="Fallos">Fallos:</h1>
+        </div>
+    </div>
+    <div id="Respuestas">
+        <div id="Respuesta1">
+            <p id="Respuesta1TXT"></p>
+        </div>
+        <div id="Respuesta2">
+            <p id="Respuesta2TXT"></p>
+        </div>
+        <div id="Respuesta3">
+            <p id="Respuesta3TXT"></p>
+        </div>
+        <div id="Respuesta4">
+            <p id="Respuesta4TXT"></p>
+        </div>
+    </div>
+    <script>
+        var arrayPreguntas = ["¿Cuál es la capital de España?", "¿Quién creó el kernel Linux?", "¿Nombre del primer avión comercial supersónico?"]
+        var arrayRespuestas1 = ["Barcelona", "Huesca", "Madrid", "Barbastro"]
+        var arrayRespuestas2 = ["Linus Torvalds", "Bill Gates", "Steve Jobs", "Jeff Bezos"]
+        var arrayRespuestas3 = ["Sonic", "F16", "Eurofighter", "Concorde"]
+        var aciertos = 0;
+        var aciertosTxt = document.querySelector("#Aciertos");
+        var fallos = 0;
+        var fallosTxt = document.querySelector("#Fallos");
+        aciertosTxt.innerHTML = "Aciertos: "+aciertos;
+        fallosTxt.innerHTML = "Fallos: "+fallos;
+        var txtPregunta = document.querySelector("#PreguntaEscrita");
+        var respuesta1 = document.querySelector("#Respuesta1TXT");
+        var respuesta2 = document.querySelector("#Respuesta2TXT");
+        var respuesta3 = document.querySelector("#Respuesta3TXT");
+        var respuesta4 = document.querySelector("#Respuesta4TXT");
+        var respuesta1div = document.querySelector("#Respuesta1");
+        var respuesta2div = document.querySelector("#Respuesta2");
+        var respuesta3div = document.querySelector("#Respuesta3");
+        var respuesta4div = document.querySelector("#Respuesta4");
+        var numpregunta = 0
+        function Preguntas(preguntas){
+                if(numpregunta == 0){
+                    txtPregunta.innerHTML = arrayPreguntas[numpregunta]
+                    respuesta1.innerHTML = arrayRespuestas1[0];
+                    respuesta2.innerHTML = arrayRespuestas1[1];
+                    respuesta3.innerHTML = arrayRespuestas1[2];
+                    respuesta4.innerHTML = arrayRespuestas1[3];
+                    respuesta1div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas1[2]);respuestaIncorrecta();};
+                    respuesta2div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas1[2]);respuestaIncorrecta();};
+                    respuesta3div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas1[2]);respuestaCorrecta();};
+                    respuesta4div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas1[2]);respuestaIncorrecta();};
+                }
+                else if(numpregunta == 1){
+                    txtPregunta.innerHTML = arrayPreguntas[numpregunta]
+                    respuesta1.innerHTML = arrayRespuestas2[0];
+                    respuesta2.innerHTML = arrayRespuestas2[1];
+                    respuesta3.innerHTML = arrayRespuestas2[2];
+                    respuesta4.innerHTML = arrayRespuestas2[3];
+                    respuesta1div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas2[0]);respuestaCorrecta();};
+                    respuesta2div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas2[0]);respuestaIncorrecta();};
+                    respuesta3div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas2[0]);respuestaIncorrecta();};
+                    respuesta4div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas2[0]);respuestaIncorrecta();};
+                }
+                else if(numpregunta == 2){
+                    txtPregunta.innerHTML = arrayPreguntas[numpregunta]
+                    respuesta1.innerHTML = arrayRespuestas3[0];
+                    respuesta2.innerHTML = arrayRespuestas3[1];
+                    respuesta3.innerHTML = arrayRespuestas3[2];
+                    respuesta4.innerHTML = arrayRespuestas3[3];
+                    respuesta1div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas3[3]);respuestaIncorrecta();pantallaFinal()};
+                    respuesta2div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas3[3]);respuestaIncorrecta();pantallaFinal()};
+                    respuesta3div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas3[3]);respuestaIncorrecta();pantallaFinal()};
+                    respuesta4div.onclick = function() {alert("La respuesta correcta era "+arrayRespuestas3[3]);respuestaCorrecta();pantallaFinal()};
+                }
+
+        }
+        /*function mostrarRespuesta(pregunta){
+            if (pregunta == 0){
+                numpregunta++;
+                document.write("<p>La respuesta era "+arrayRespuestas1[2]+"</p><button onclick=\"Preguntas(preguntas)\">Siguiente pregunta</button>")
+            }
+            else if (pregunta == 1){
+                numpregunta++;
+                document.write("<p>La respuesta era "+arrayRespuestas2[0]+"</p><button onclick=\"Preguntas(preguntas)\">Siguiente pregunta</button>")
+                
+            }
+            else{
+                numpregunta = 0;
+                document.write("<p>La respuesta era "+arrayRespuestas3[3]+"</p><button onclick=\"Preguntas(preguntas)\">Siguiente pregunta</button>")
+            }
+        }*/    
+        function respuestaCorrecta(){
+            aciertos++;
+            numpregunta++;
+            Preguntas(arrayPreguntas);
+            aciertosTxt.innerHTML = "Aciertos: "+aciertos;
+            
+        }
+        function respuestaIncorrecta(){
+            fallos++;
+            numpregunta++;
+            Preguntas(arrayPreguntas);
+            fallosTxt.innerHTML = "Fallos: "+fallos;
+        }
+        function pantallaFinal(){
+            window.location.replace("final.html");
+        }
+        Preguntas(arrayPreguntas);
+    </script>
+</body>
+</html>

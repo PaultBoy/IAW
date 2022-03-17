@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .top{
+            background-color: blue;
+            height: 50vh;
+        }
+        .mid{
+            background-color: chartreuse;
+            height: 25vh;
+        }
+        .bot{
+            background-color: coral;
+            height: 25vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">TOP</div>
+    <div class="mid">MID
+        <!--Se pueden declarar espacios de script dentro de cualquier etiqueta para conseguir distintos resultados-->
+        <script>
+            // Punto y coma es opcional
+            // Declaración de variables:
+            var nombreVariable = 3;
+            var cadena = "hola mundo";
+            var numero = 12;
+            var booleano = true
+            var array1 = [1,2,3,4,5,"Hola", true]
+            // Objeto
+            var tablas1 = {
+                hola: 3,
+                adios: true
+            }
+            // Sacar variables por pantalla
+            // Con document.write puedes darle forma a los datos sacados por pantalla, con etiquetas HTML funcionales,
+            // equivalente a echo en php
+            document.write("<h1>"+cadena+"</h1>")
+
+            var operaciones = 3+4-5*5/2 **2
+            // Bucle for
+            for (var i = 0; i<=20; i++){
+                numero = numero + i
+                // Span es una etiqueta que hace referencia a texto sin salto de linea
+                document.write("<span>"+numero+" </span>")
+            }
+
+            //Declarar funciones. Pueden ser utilizadas desde cualquier parte del código, sin importar la profundidad
+            function funcionJuntarCadenas(cadena1,cadena2){
+                var cadenaJuntada = cadena1 + cadena2
+                return cadeJuntada
+            }
+            // Llamar funciones
+            var cadena3 = funcionJuntarCadenas("Hola ","mundo!")
+            document.write(cadena3)
+            document.write(funcionJuntarCadenas("Hola ","mundo!"))
+            // Llamar arrays
+            document.write(array1[0]+array[4])
+            document.write(tablas1["hola"]+tablas1["adios"])
+        </script>
+    </div>
+    <div class="bot">DOWN</div>
+
+    <h1>Hello world</h1>
+
+    
+</body>
+</html>

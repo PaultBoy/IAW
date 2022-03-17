@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div><img src="White_background.png" onclick="dibujar(this)" class="x1y1"></div>
+    <div><img src="White_background.png" onclick="dibujar(this)" class="x2y1"></div>
+    <div><img src="White_background.png" onclick="dibujar(this)" class="x3y1"></div><br>
+    <div><img src="White_background.png" onclick="dibujar(this)" class="x1y2"></div>
+    <div><img src="White_background.png" onclick="dibujar(this)" class="x2y2"></div>
+    <div><img src="White_background.png" onclick="dibujar(this)" class="x3y2"></div><br>
+    <div><img src="White_background.png" onclick="dibujar(this)" class="x1y3"></div>
+    <div><img src="White_background.png" onclick="dibujar(this)" class="x2y3"></div>
+    <div><img src="White_background.png" onclick="dibujar(this)" class="x3y3"></div>
+    <p></p>
+    <script>
+        var contador = 1;
+        var Texto = document.querySelector("p")
+        Texto.innerHTML = "Turno del círculo"
+        function dibujar(elemento){
+            
+            if (/White_background.png/.test(elemento.src)){
+                if(contador % 2 == 0){
+                    contador++;
+                    elemento.src = "multiplication-sign.png"
+                    Texto.innerHTML = "Turno del círculo"
+                }
+                else{
+                    contador++;
+                    elemento.src = "circulo.png"
+                    Texto.innerHTML = "Turno de la cruz"
+                }
+                
+            } 
+            setTimeout(function() {tresenraya();},100);
+        }
+        function tresenraya(){
+            var x1y1 =document.querySelector(".x1y1")
+            var x2y1 =document.querySelector(".x2y1")
+            var x3y1 =document.querySelector(".x3y1")
+            var x1y2 =document.querySelector(".x1y2")
+            var x2y2 =document.querySelector(".x2y2")
+            var x3y2 =document.querySelector(".x3y2")
+            var x1y3 =document.querySelector(".x1y3")
+            var x2y3 =document.querySelector(".x2y3")
+            var x3y3 =document.querySelector(".x3y3")
+            if (/circulo.png/.test(x1y1.src) && /circulo.png/.test(x2y1.src) && /circulo.png/.test(x3y1.src)){
+                alert("Ha ganado el círculo")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/circulo.png/.test(x1y2.src) && /circulo.png/.test(x2y2.src) && /circulo.png/.test(x3y2.src)){
+                alert("Ha ganado el círculo")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/circulo.png/.test(x1y3.src) && /circulo.png/.test(x2y3.src) && /circulo.png/.test(x3y3.src)){
+                alert("Ha ganado el círculo")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/circulo.png/.test(x1y1.src) && /circulo.png/.test(x1y2.src) && /circulo.png/.test(x1y3.src)){
+                alert("Ha ganado el círculo")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/circulo.png/.test(x2y1.src) && /circulo.png/.test(x2y2.src) && /circulo.png/.test(x2y3.src)){
+                alert("Ha ganado el círculo")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/circulo.png/.test(x3y1.src) && /circulo.png/.test(x3y2.src) && /circulo.png/.test(x3y3.src)){
+                alert("Ha ganado el círculo")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/circulo.png/.test(x1y1.src) && /circulo.png/.test(x2y2.src) && /circulo.png/.test(x3y3.src)){
+                alert("Ha ganado el círculo")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/circulo.png/.test(x1y3.src) && /circulo.png/.test(x2y2.src) && /circulo.png/.test(x3y1.src)){
+                alert("Ha ganado el círculo")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            //
+            //
+            //
+            //
+            else if (/multiplication-sign.png/.test(x1y1.src) && /multiplication-sign.png/.test(x2y1.src) && /multiplication-sign.png/.test(x3y1.src)){
+                alert("Ha ganado la cruz")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/multiplication-sign.png/.test(x1y2.src) && /multiplication-sign.png/.test(x2y2.src) && /multiplication-sign.png/.test(x3y2.src)){
+                alert("Ha ganado la cruz")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/multiplication-sign.png/.test(x1y3.src) && /multiplication-sign.png/.test(x2y3.src) && /multiplication-sign.png/.test(x3y3.src)){
+                alert("Ha ganado la cruz")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/multiplication-sign.png/.test(x1y1.src) && /multiplication-sign.png/.test(x1y2.src) && /multiplication-sign.png/.test(x1y3.src)){
+                alert("Ha ganado la cruz")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/multiplication-sign.png/.test(x2y1.src) && /multiplication-sign.png/.test(x2y2.src) && /multiplication-sign.png/.test(x2y3.src)){
+                alert("Ha ganado la cruz")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/multiplication-sign.png/.test(x3y1.src) && /multiplication-sign.png/.test(x3y2.src) && /multiplication-sign.png/.test(x3y3.src)){
+                alert("Ha ganado la cruz")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/multiplication-sign.png/.test(x1y1.src) && /multiplication-sign.png/.test(x2y2.src) && /multiplication-sign.png/.test(x3y3.src)){
+                alert("Ha ganado la cruz")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (/multiplication-sign.png/.test(x1y3.src) && /multiplication-sign.png/.test(x2y2.src) && /multiplication-sign.png/.test(x3y1.src)){
+                alert("Ha ganado la cruz")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+            else if (!/White_background.png/.test(x1y1.src) && !/White_background.png/.test(x1y2.src) && !/White_background.png/.test(x1y3.src) && !/White_background.png/.test(x2y1.src) && !/White_background.png/.test(x2y2.src) && !/White_background.png/.test(x2y3.src) && !/White_background.png/.test(x3y1.src) && !/White_background.png/.test(x3y2.src) && !/White_background.png/.test(x3y3.src)){
+                alert("Empate")
+                x1y1.src = "White_background.png"
+                x2y1.src = "White_background.png"
+                x3y1.src = "White_background.png"
+                x1y2.src = "White_background.png"
+                x2y2.src = "White_background.png"
+                x3y2.src = "White_background.png"
+                x1y3.src = "White_background.png"
+                x2y3.src = "White_background.png"
+                x3y3.src = "White_background.png"
+                contador = 1
+                Texto.innerHTML = "Turno del círculo"
+            }
+        }
+    </script>
+</body>
+</html>

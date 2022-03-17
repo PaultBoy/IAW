@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>  
+    
+        <div class="titulo">
+            <h1 onclick="cambiarTitulo(this)">Título</h1>
+        </div>
+
+        <div class= "central">
+            <div class="menu">
+                
+                <ul>
+                    <li onclick="cambiarContenido(this)">Home</a></li>
+                    <li onclick="cambiarLugar()">News</a></li>
+                    <li onclick="cambiarTamanyo()">Contact</a></li>
+                    <li onclick="restaurarOriginal()">About</a></li>
+                  </ul>
+            </div>
+
+            <div class="texto"> 
+                <p onclick="cambiarparrafo2(this)" class="p">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                <br>
+                <p onclick="cambiarparrafo2(this)" class="p">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                <br>
+                <!--Con this estás llamando a pasar como parámetro la propia etiqueta. Por supuesto, la función ha de aceptar parámetros-->
+                <p onclick="cambiarparrafo2(this)" class="p">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
+            </div>
+
+        </div>
+
+        
+        <div class="pie">
+            <img src="orni1.jpg" id="orn1" >
+            <img src="orni2.jpg" id="orn2" >
+            <img src="orni3.png" id="orn3">
+        </div>
+    <script>
+        function cambiarparrafo2(elPropioElemento){
+            var parrafo3 = elPropioElemento; 
+            parrafo3.style.backgroundColor = "yellow";
+        }
+        function cambiarContenido(elemento){
+            var boton =  elemento;
+            boton.innerHTML = "Botón pulsado";
+            boton.style.height = "100px";
+            boton.style.width = "100px";
+        }
+        function cambiarLugar(){
+            var imagen = document.querySelector("#orn3")
+            var imagenes = ["orni1.jpg","orni2.jpg","orni3.png"]
+            imagen.src = imagenes[Math.floor(Math.random() * imagenes.length)];
+            console.log(imagen.src)
+        }
+        function cambiarTitulo(elemento){
+            var titulo = elemento;
+            titulo.innerHTML = "Hola a todos";
+            titulo.style.backgroundColor = "green";
+        }
+        function cambiarTamanyo(){
+            var img = document.querySelector("#orn2")
+            img.style.width = "20%"
+            img.style.height= "20vh"
+            img.style.border = "2px black solid"
+        }
+        // Para restaurar valores originales, define las propiedades como cadenas vacías. 
+        // Así, las propiedades pasarán a ser las definidas por defecto en el CSS
+        function restaurarOriginal(){
+            var img = document.querySelector("#orn2")
+            img.style.width = ""
+            img.style.height= ""
+            img.style.border = ""
+        }
+    </script>
+</body>
+</html>
